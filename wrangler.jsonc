@@ -1,0 +1,12 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "rill-tv",
+  "main": "src/index.ts",
+  "compatibility_date": "2025-06-01",
+  "compatibility_flags": ["nodejs_compat"],
+  "rules": [{ "type": "Text", "globs": ["**/*.sql"] }],
+  "d1_databases": [{ "binding": "DB", "database_name": "rill", "migrations_dir": "migrations","database_id": "bd1a24c4-c1d8-42c3-b924-1b5fca88f91e" }],
+  "triggers": { "crons": ["* * * * *"] },
+  "observability": { "enabled": true },
+  "vars": {}
+}
